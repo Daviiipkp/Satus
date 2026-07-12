@@ -1,1 +1,15 @@
-@import "./tailwind.css"
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;700&family=Great+Vibes&family=Monoton&family=Permanent+Marker&family=Press+Start+2P&family=Righteous&family=Syne:wght@500;800&family=Unbounded:wght@400;700;900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-cinzel: "Cinzel", serif;
+  --font-cinzel-dec: "Cinzel Decorative", serif;
+  --font-syne: "Syne", sans-serif;
+  --font-unbounded: "Unbounded", sans-serif;
+  --font-greatvibes: "Great Vibes", cursive;
+  --font-righteous: "Righteous", sans-serif;
+  --font-pixel: "Press Start 2P", system-ui;
+  --font-marker: "Permanent Marker", cursive;
+  --font-monoton: "Monoton", sans-serif;
+}
