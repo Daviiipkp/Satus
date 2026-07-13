@@ -10,6 +10,7 @@ import Dashboard from './pages/Dashboard.tsx'
 
 import { ClerkProvider } from '@clerk/clerk-react'
 import SignIn from './pages/SignIn.tsx'
+import SignUp from './pages/SignUp.tsx'
 
 
 
@@ -24,6 +25,9 @@ const router = createBrowserRouter([
   },{
     path: "/sign-in",
     element: <SignIn />,
+  },{
+    path: "/sign-up",
+    element: <SignUp />,
   }
 ])
 

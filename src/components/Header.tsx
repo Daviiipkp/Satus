@@ -1,6 +1,7 @@
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
 import { Vertical_Divisor } from './Vertical_Divisor'
 import SmallLogo from "../assets/1.png"
+import { Link } from 'react-router-dom';
 
 export function Header() {
     return (
@@ -16,12 +17,28 @@ export function Header() {
                 <button className="text-gray-400 text-xl font-syne uppercase cursor-pointer hover:text-amber-100 transition-colors duration-300">Digital Solutions</button>
                 <Vertical_Divisor/>
                 <SignedOut>
-                    <SignInButton mode="modal">
-                        <button className="text-gray-800 bg-white text-2xl rounded-2xl w-1/6 h-4/6 font-syne uppercase cursor-pointer hover:bg-amber-100 transition-colors duration-300">Sign-In</button>
-                    </SignInButton>
+                    <Link to="/sign-in" className="text-gray-800 bg-white text-xl justify-center flex items-center rounded-2xl w-1/7 h-4/7 font-syne uppercase cursor-pointer hover:bg-amber-100 transition-colors duration-300">Sign-In</Link>
                 </SignedOut>
                 <SignedIn>
-                    <UserButton afterSignOutUrl="/" />
+                    <UserButton 
+                        appearance={{
+                            elements: {
+                                userButtonTrigger: {
+                                    width: "36px",
+                                    height: "36px",
+                                    transition: "transform 0.2s",
+                                    "&:hover": {
+                                        transform: "scale(1.05)"
+                                    }
+                                },
+                                userButtonAvatarBox: {
+                                    width: "100%",
+                                    height: "100%",
+                                    borderRadius: "0.5rem"
+                                }
+                            }
+                        }}
+                    />
                 </SignedIn>
             </div>
         </div>
